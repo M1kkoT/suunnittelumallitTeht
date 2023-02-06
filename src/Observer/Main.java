@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+
         ClockTimer clock = new ClockTimer();
         clock.addObserver(new DigitalClock());
 

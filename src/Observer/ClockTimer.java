@@ -24,7 +24,7 @@ public class ClockTimer extends Observable implements Runnable{
 
     public String getTime(){
         long time = System.currentTimeMillis();
-        SimpleDateFormat date = new SimpleDateFormat("HH:MM:ss");
+        SimpleDateFormat date = new SimpleDateFormat("HH:mm:ss");
         Date fromMillis = new Date(time);
         String result = date.format(fromMillis);
 
