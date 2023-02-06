@@ -10,14 +10,12 @@ public class Main {
         ClockTimer clock = new ClockTimer();
         clock.addObserver(new DigitalClock());
 
-        String string;
+        String string = "string";
         Thread thread = new Thread(clock);
-        System.out.println("Type anything to start timer and type \"s\" to stop");
-        string = scanner.nextLine();
-        if(!string.toLowerCase().equals("s")){
-            thread.start();
-        }
-        while (!string.toLowerCase().equals("s")){
+        System.out.println("Type anything to start timer and type \"s\" or 'empty' to stop");
+        scanner.nextLine();
+        thread.start();
+        while (! (string.toLowerCase().equals("s") | string.toLowerCase().equals(""))){
             string = scanner.nextLine();
         }
 
