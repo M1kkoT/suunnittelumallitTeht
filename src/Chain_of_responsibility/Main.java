@@ -13,14 +13,7 @@ public class Main {
         CEO ceo = new CEO();
         manager.setSuccessor(director);
         director.setSuccessor(ceo);
-        while (true) {
-            System.out.println("Enter the current salary");System.out.print(">");
-            double current = Double.parseDouble(sc.nextLine());
-            System.out.println("Enter the asked salary to check who should approve your expenditure.");System.out.print(">");
-            double asked = Double.parseDouble(sc.nextLine());
-            manager.approveRaise(new RaiseRequest(current, asked));
-        }
-        /*
+
         try {
             while (true) {
                 System.out.println("Enter the current salary");System.out.print(">");
@@ -31,6 +24,6 @@ public class Main {
             }
         } catch(Exception e) {
             System.out.println(e);
-        }*/
+        }
     }
 }
