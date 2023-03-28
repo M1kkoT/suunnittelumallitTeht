@@ -2,8 +2,6 @@ package Visitor;
 
 public abstract class evolutionState {
 
-    protected int experience;
-
     public void performAttack(Pokemon c){};
 
     public void tellStage(Pokemon c){};
@@ -13,6 +11,7 @@ public abstract class evolutionState {
     public void capture(Pokemon c){};
 
     public void accept(PokemonVisitor visitor) {};
+
 
     void changeState(Pokemon c, evolutionState s){};
 }

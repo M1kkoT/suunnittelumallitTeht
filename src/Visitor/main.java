@@ -2,7 +2,7 @@ package Visitor;
 
 public class main {
     public static void main(String[] args) {
-        Pokemon pokemon = new Pokemon();
+        Pokemon pokemon = new Pokemon(Bulbasaur.getInstance());
 
         PokemonVisitor visitor = new BonusVisitor();
 

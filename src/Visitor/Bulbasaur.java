@@ -1,5 +1,7 @@
 package Visitor;
 
+import java.security.spec.PKCS8EncodedKeySpec;
+
 public class Bulbasaur extends evolutionState {
 
     private String name = "Bulbasaur";
@@ -18,8 +20,8 @@ public class Bulbasaur extends evolutionState {
     @Override
     public void performAttack(Pokemon c) {
         System.out.println("Bulbasaur used 'Vine whip', it dealt 45 dmg");
-        experience += 10;
-        if(experience >= 30){
+        c.xp += 10;
+        if(c.xp >= 30){
             changeState(c, Ivysaur.getInstance());
         }
     }
@@ -37,8 +39,8 @@ public class Bulbasaur extends evolutionState {
     @Override
     public void move(Pokemon c) {
         System.out.println(name + " slowly walked 2 meters");
-        experience += 5;
-        if(experience >= 30){
+        c.xp += 5;
+        if(c.xp >= 30){
             changeState(c, Ivysaur.getInstance());
         }
     }

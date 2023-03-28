@@ -3,8 +3,11 @@ package Visitor;
 public class Pokemon {
     private evolutionState state;
 
-    public Pokemon(){
-        state = Bulbasaur.getInstance();
+    protected int xp;
+
+    public Pokemon(evolutionState state){
+        this.state = state;
+        xp = 0;
     }
 
     public void attack(){
@@ -24,6 +27,7 @@ public class Pokemon {
     }
 
     public void accept(PokemonVisitor visitor){
+        visitor.setCurrentPokemon(this);
         state.accept(visitor);
     }
 

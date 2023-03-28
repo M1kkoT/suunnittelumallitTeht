@@ -27,7 +27,7 @@ public class Venusaur extends evolutionState {
             cooldown = false;
         }else {
             System.out.println("Venysaur used 'Solar beam', it dealt 120 dmg.\nVenysaur needs to recover for a while.");
-            experience += 50;
+            c.xp += 50;
             cooldown = true;
         }
 
@@ -41,7 +41,7 @@ public class Venusaur extends evolutionState {
     @Override
     public void move(Pokemon c) {
         System.out.println(name + " paced 10 meters");
-        experience += 20;
+        c.xp += 20;
 
     }
 

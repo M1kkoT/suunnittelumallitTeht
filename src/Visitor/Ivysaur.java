@@ -21,8 +21,8 @@ public class Ivysaur extends evolutionState {
     @Override
     public void performAttack(Pokemon c) {
         System.out.println("Ivysaur used 'Razor leaf', it dealt 55 dmg");
-        experience += 20;
-        if(experience >= 130){
+        c.xp += 20;
+        if(c.xp >= 130){
             changeState(c, Venusaur.getInstance());
         }
     }
@@ -35,8 +35,8 @@ public class Ivysaur extends evolutionState {
     @Override
     public void move(Pokemon c) {
         System.out.println(name + " walked 5 meters");
-        experience += 10;
-        if(experience >= 130){
+        c.xp += 10;
+        if(c.xp >= 130){
             changeState(c, Venusaur.getInstance());
         }
     }
