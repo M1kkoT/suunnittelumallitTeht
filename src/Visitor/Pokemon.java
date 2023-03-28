@@ -4,11 +4,7 @@ public class Pokemon {
     private evolutionState state;
 
     public Pokemon(){
-        state = null;
-    }
-
-    public void setState(evolutionState state){
-        this.state = state;
+        state = Bulbasaur.getInstance();
     }
 
     public void attack(){

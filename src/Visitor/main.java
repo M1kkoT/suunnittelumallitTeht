@@ -3,7 +3,6 @@ package Visitor;
 public class main {
     public static void main(String[] args) {
         Pokemon pokemon = new Pokemon();
-        pokemon.setState(Bulbasaur.getInstance());
 
         PokemonVisitor visitor = new BonusVisitor();
 
