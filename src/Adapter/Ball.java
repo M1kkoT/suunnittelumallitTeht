@@ -2,7 +2,7 @@ package Adapter;
 
 
 //adaptee
-public class Ball {
+public class Ball implements ThreeDimentionalShape{
     private double radius;
 
 
